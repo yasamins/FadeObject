@@ -9,6 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var myView: UIView!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +23,23 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func Fadein(sender: AnyObject) {
+        
+        UIView.animateWithDuration(1, animations: {
+            self.myView.layer.opacity = 1
+            })
+    }
+   
+    @IBAction func Fadeout(sender: AnyObject) {
+        UIView.animateWithDuration(1, animations: {
+            self.myView.layer.opacity = 0
+            })
+    }
+        
+        
+    }
 
 
-}
+
 
